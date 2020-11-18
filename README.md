@@ -13,15 +13,15 @@ GOOGLE_CLIENT_SECRET =
 ```
 
 On console Node dependencies must be installed and the application can be run in development or production mode.
-*Install dependencies
+- Install dependencies
 ```
 npm install
 ```
-*Run App in production mode
+- Run App in production mode
 ```
 npm start
 ```
-*Run App in Dev mode
+- Run App in Dev mode
 ```
 npm run dev
 ```
