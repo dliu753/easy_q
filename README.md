@@ -1,6 +1,8 @@
 # EasyQueue
 >EasyQueue allows users to create their own personal queue. Registration requires a personal google email account. Users will be giving a personal link for clients to use to register into the personal queue.
 
+![alt text](https://github.com/dliu753/easy_q/blob/main/extra/easy_q_1.PNG)
+
 This web application was built using NodeJS, MongoDB, Express, Handlebars, and Google OAuth.
 
 ## Usage
