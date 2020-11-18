@@ -6,8 +6,22 @@ This web application was built using NodeJS, MongoDB, Express, Handlebars, and G
 ## Usage
 
 In config.env MongoDB and GoogleApi credentials must be inputted.
-```bash
+```
 MONGO_URI = 
 GOOGLE_CLIENT_ID = 
 GOOGLE_CLIENT_SECRET = 
+```
+
+On console Node dependencies must be installed and the application can be run in development or production mode.
+>Install dependencies
+```
+npm install
+```
+>Run App in production mode
+```
+npm start
+```
+>Run App in Dev mode
+```
+npm run dev
 ```
