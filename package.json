@@ -1,0 +1,37 @@
+{
+  "name": "easyq",
+  "version": "1.0.0",
+  "description": "Application to create a queue for general use.",
+  "main": "app.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node app",
+    "dev": "cross-env NODE_ENV=development nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dliu753/easy_q.git"
+  },
+  "author": "David Liu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dliu753/easy_q"
+  },
+  "homepage": "https://github.com/dliu753/easy_q#readme",
+  "dependencies": {
+    "connect-mongo": "^3.2.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.1",
+    "mongoose": "^5.10.12",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.6"
+  }
+}

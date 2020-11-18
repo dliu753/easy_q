@@ -1,0 +1,43 @@
+<h3>Welcome {{name}}</h3>
+<p>Your personal queue code:  <a href="/queue/{{userId}}">{{userId}}</a></p>
+
+
+{{#if guests}}
+    <form action="/queue/pop/{{userId}}" method="POST" id="pop-queue">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit" class="btn red">
+            <span>Remove Next <i class="fas fa-arrow-circle-right"></i></span>
+        </button>
+    </form>
+    <table class="highlight">
+        <thread>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Time</th>
+                <th></th>
+            </tr>
+        </thread>
+        <tbody>
+            {{#each guests}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{email}}</td>
+                    <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+                    <td>
+                        <form action="/queue/{{_id}}" method="POST" id="delete-queue">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn waves-effect waves-light">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{else}}
+<div class="section">
+    <span class="green-text">Your queue is currently empty.</span>
+</div>
+{{/if}}

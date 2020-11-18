@@ -1,0 +1,61 @@
+<h3>Welcome to {{name}}'s Queue</h3>
+
+{{#if guests}}
+    <div class="divider"></div>
+    <div class="section">
+        <table class="striped">
+            <thread>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Time</th>
+                    <th></th>
+                </tr>
+            </thread>
+            <tbody>
+                {{#each guests}}
+                    <tr>
+                        <td>{{name}}</td>
+                        <td>{{email}}</td>
+                        <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+{{else}}
+<div class="container center">
+    <span class="green-text">The queue is empty. Register Now!</span>
+</div>
+{{/if}}
+
+<br><br>
+<div class="divider"></div>
+
+<div class="section">
+    <h4>Register</h4>
+    <div class="row">
+        <form action="/queue" method="POST" class="col s8">
+        <input type="text" name="user" id="user" value="{{userId}}" style="display:none">
+            <div class="row">
+                <div class="input-field">
+                    <input type="text" id="name" name="name">
+                    <label for="name">Name</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field">
+                    <input type="text" id="email" name="email">
+                    <label for="email">email</label>   
+                </div>
+            </div>
+
+            <div class="row">
+                <input type="submit" value="Submit" class="btn green">
+                <a href="/" class="btn red">Exit</a>
+            </div>
+        </form>
+    </div>
+</div>
+
